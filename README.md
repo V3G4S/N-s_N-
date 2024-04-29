@@ -1,1 +1,1 @@
-Repositório aula de versionamento.
+Jogo do Número Mágico
