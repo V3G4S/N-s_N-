@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instruções git</title>
-</head>
-<body>
-    <h1><i><b>SA 2024</b></i></h1>
-    <h2><i>Clonar repositório</i></h2>
-    <p>git clone 'link do git'</p>
-    <br>
-    <h2><i>Commitar</i></h2>
-    <p>git add .</p>
-    <p>git commit -m "Anotações para fazer um commit"</p>
-    <p>git push</p>
-    <br>
-    <h2><i>Abrir terminal</i></h2>
-    <p>ctrl + '</p>
-    <br>
-    <h2><i>Configurar usuário</i></h2>
-    <p>git config user.name "nome do usuário do git"</p>
-    <p>git config user.email "email da conta do git"</p>
-    <h2><i>Baixar alterações</i></h2>
-</body>
+<html>
+  <head>
+    <title>Número Mágico</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Número Mágico</h1>
+    <p>Escolha um modo de jogo:</p>
+    <button onclick="startPvP()">PvP</button>
+    <button onclick="startPvE()">PvE</button>
+    <div id="pve-difficulty" style="display:none;">
+      <p>Escolha a dificuldade:</p>
+      <button onclick="setDifficulty(1)">Fácil</button>
+      <button onclick="setDifficulty(2)">Médio</button>
+      <button onclick="setDifficulty(3)">Difícil</button>
+    </div>
+    <div id="pve-game" style="display:none;">
+      <p>Tente adivinhar o número mágico:</p>
+      <input type="number" id="guess" min="1">
+      <button onclick="checkGuess()">Verificar</button>
+      <p id="result"></p>
+    </div>
+    <div id="pvp-game" style="display:none;">
+      <p>Jogador 1, escolha um número:</p>
+      <input type="password" id="pvp-number" min="1" max="100">
+      <button onclick="startPvPGuessing()">Começar</button>
+      <p id="pvp-result"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
