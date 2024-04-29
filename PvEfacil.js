@@ -12,12 +12,12 @@ while (true) {
     } else if(numDigitado < numMagico){
         alert('O número mágico é maior.')
     } else {
-        alert('Você acertou o número : ' + numMagico)
+        alert('Você acertou o número: ' + numMagico)
         break; // sair do loop quando o usuário adivinha o número mágico
     }
 }
 let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-alert(`Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`)
+alert(`Você descobriu o número mágico com ${tentativas} ${palavraTentativa}!`)
 
 function gerarNumeroAleatorio() {
     let numeroEscolhido = parseInt(Math.random() * numLimite + 1);
